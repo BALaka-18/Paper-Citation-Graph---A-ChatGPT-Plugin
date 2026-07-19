@@ -1,0 +1,6 @@
+google-genai>=2.12.0
+pydantic>=2.13.0
+requests>=2.34.0
+python-dotenv>=1.2.0
+numpy>=2.5.0
+mcp>=1.28.0
