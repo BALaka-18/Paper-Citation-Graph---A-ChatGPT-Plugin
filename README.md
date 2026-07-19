@@ -10,6 +10,9 @@ Not a citation-count graph (Connected Papers, ResearchRabbit, and Litmaps alread
 
 One evidence table, one row per (citing paper, claim-or-limitation) relationship — a paper matched to multiple claims gets one row per claim, with its name/year/status/quote shown once and left blank on the rows below it (the standard convention for "this belongs to the group above," since markdown tables have no real merged cells). Followed by a compact claim-level rollup (how many citing papers landed in each verdict bucket, per claim), and a list of any claims/limitations that no citation matched closely enough to evaluate.
 
+<img width="713" height="207" alt="image" src="https://github.com/user-attachments/assets/7f5f364a-6d1f-4138-aaa5-91bbbadc101b" />
+<img width="1607" height="748" alt="image" src="https://github.com/user-attachments/assets/ab40f413-9b7e-4d91-b1c5-7b690ec27fbd" />
+
 ## Architecture
 
 ```
