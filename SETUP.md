@@ -1,8 +1,8 @@
 # Setup — trying this out locally
 
-This gets the project running on your own machine. There are two ways to use it — pick one to start (you can try the other later):
+This gets the project running on your own machine.
 
-**ChatGPT App.** Runs inside a ChatGPT conversation. Uses your own ChatGPT Plus/Pro usage instead of a separate API — no Gemini key needed for this mode.
+**ChatGPT App.** Runs inside a ChatGPT conversation. Uses your own ChatGPT Plus/Pro usage instead of a separate API
 
 ## 1. Prerequisites
 
@@ -79,7 +79,7 @@ Both terminals (server + tunnel) need to stay open while you're using it. Restar
 
 ## Optional: a Semantic Scholar API key
 
-Neither mode strictly requires this — both work on Semantic Scholar's shared free pool — but a key gets you a more reliable rate limit instead of competing with everyone else on the unauthenticated tier.
+This is not strictly required — the plugin works on Semantic Scholar's shared free pool — but a key gets you a more reliable rate limit instead of competing with everyone else on the unauthenticated tier.
 
 1. Apply at [semanticscholar.org/product/api](https://www.semanticscholar.org/product/api) (manually reviewed, can take a few days).
 2. Once approved, add it to `.env`:
@@ -87,7 +87,7 @@ Neither mode strictly requires this — both work on Semantic Scholar's shared f
    SEMANTIC_SCHOLAR_API_KEY=your-key-here
    ```
 
-No code changes needed either way — both modes pick this up automatically if it's present, and fall back gracefully if it's blank.
+No code changes needed either way — the code picks this up automatically if it's present, and falls back gracefully if it's blank.
 
 ---
 
