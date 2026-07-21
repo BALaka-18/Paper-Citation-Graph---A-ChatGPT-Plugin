@@ -39,14 +39,6 @@ mcp_server.py       Entry point — exposes fetch_paper_and_citations and
                     (Mode B does not use llm_client.py or matcher.py at all)
 ```
 
-## Current scope
-
-1. **Abstract-only extraction.** Claims and limitations come from the title + abstract, not the full paper. This particularly weakens limitation-finding — abstracts rarely state limitations explicitly, so an empty "no limitations found" result is expected often, not a bug. Full-text parsing is the natural next step, not yet built.
-2. **Both classifiers are unvalidated.** There's no existing benchmark for either task — SciFact is the closest analog for the claim-support/dispute judgment and still isn't the same task; the limitation-resolution judgment has no benchmark at all. Before trusting output on a paper you don't already know, run it on 2-3 papers where you know the field's consensus and check whether the verdicts look right.
-3. **"Addresses" means claims to address, not verified to.** A citing paper "addressing" a limitation reflects that paper's own framing of its contribution — the tool detects the claim, it doesn't independently verify the paper actually succeeded. The report says this explicitly; don't summarize it away.
-4. **Citation context is short** — a 1-3 sentence excerpt from Semantic Scholar, not a page or section number. That excerpt (shown as the report's quote) is the closest available pointer to "where to check" in the citing paper; true page/section references aren't available from this data source.
-5. **Citation coverage isn't the same as citation count.** Semantic Scholar can only extract a context sentence from a citing paper it has full-text access to (its open-access corpus) — a landmark, heavily-cited paper can still return far fewer *usable* citations than its total citation count implies, because most of its citing papers are behind closed access. A low count on a famous paper is often this, not a bug.
-
 ## Known issues and how to read them
 
 - **`Error creating connector` in ChatGPT** — usually one of: the tunnel/server isn't actually running, the URL is missing `/mcp`, or (less common) a platform-side timeout unrelated to your setup. Restart both terminals, get a fresh tunnel URL, retry.
